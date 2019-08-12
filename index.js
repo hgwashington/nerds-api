@@ -9,7 +9,8 @@ let multiPoke = nerds.resolve('Pokemon', 150).include(['name', 'type', 'hp']).as
 
 const server = http.createServer((req, res)=>{//creates the server
     const randNum= Math.floor(Math.random() * 150);
-    res.end(`<h1>${multiPoke[randNum].name}</h1>`);
+    const randNum2= Math.floor(Math.random() * 149);
+    res.end(`<h1>${multiPoke[randNum].name} and ${multiPoke[randNum2].name}</h1>`);
 });
 
 
